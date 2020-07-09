@@ -12,7 +12,7 @@ pipeline {
 
         stage('Deploy Backend') {
             steps {
-                deploy adapters: null, contextPath: 'lab-backend', war: 'target/lab-backend.war'
+                sh 'java -jar target/lab-backend.war'
             }
         }
 
