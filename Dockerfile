@@ -1,5 +1,10 @@
 # Alpine Linux with OpenJDK JRE
-FROM openjdk:latest
-COPY target/consuming-rest-0.0.1-SNAPSHOT.jar app.jar
+FROM openjdk:8-jdk-alpine
+COPY target/lab-backend.war app.war
 # run application with this command line
-CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=default", "/app.war"]
+# CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.war"]
+
+EXPOSE 8080
+
+FROM postgres:9.6

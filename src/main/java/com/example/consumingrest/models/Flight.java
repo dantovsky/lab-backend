@@ -6,12 +6,12 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "flights")
+//@Table(name = "flights")
 public class Flight {
 
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO) // the BD creates automaticaly the ID
-    @Id
+    @Id @GeneratedValue
     private String icao24;
     private String callsign;
     private String origin_country;
