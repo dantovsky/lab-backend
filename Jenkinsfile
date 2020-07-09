@@ -25,7 +25,6 @@ pipeline {
             steps {
                 // Create a new dir
                 dir('frontend') {
-                    echo 'Segundo ls'
                     sh 'ls'
                     sh 'npm run serve' // deploy
                 }
