@@ -21,6 +21,13 @@ pipeline {
                     sh 'npm run serve' // deploy
                 }
             }
+            steps {
+                // Create a new dir
+                dir('frontend') {
+                    sh 'ls'
+                    sh 'npm run serve' // deploy
+                }
+            }
         }
     }
 }
