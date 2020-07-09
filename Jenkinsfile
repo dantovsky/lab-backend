@@ -11,19 +11,21 @@ pipeline {
 
         // API Test
 
-        stage('Deploy Frontend') {
+        stage('Download Frontend') {
             steps {
                 // Create a new dir
                 dir('frontend') {
                     git credentialsId: 'github_login', url: 'https://github.com/dantovsky/lab-frontend' // download files
                     sh 'ls'
                     sh 'npm install' // install packages and dependencies
-                    sh 'npm run serve' // deploy
                 }
             }
+        }
+        stage {
             steps {
                 // Create a new dir
                 dir('frontend') {
+                    echo 'Segundo ls'
                     sh 'ls'
                     sh 'npm run serve' // deploy
                 }
