@@ -11,7 +11,6 @@ public class Flight {
 
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO) // the BD creates automaticaly the ID
-//    private long id;
     @Id
     private String icao24;
     private String callsign;
@@ -20,14 +19,6 @@ public class Flight {
     private Integer last_contact;
     private float longitude;
     private float latitude;
-
-//    public long getId() {
-//        return id;
-//    }
-//
-//    public void setId(long id) {
-//        this.id = id;
-//    }
 
     public String getIcao24() {
         return icao24;
@@ -85,27 +76,3 @@ public class Flight {
         this.latitude = latitude;
     }
 }
-
-/* Example to insert on Postman
-
-{
-	"id": xxx, (remove this line)
-	"icao24": "4b1809",
-	"callsign": "SWR201Z ",
-	"origin_country": "Switzerland",
-	"time_position": 1583723415,
-	"last_contact": 1583723419,
-	"longitude": 8.565,
-	"latitude": 47.4418
-},
-{
-	"id": xxx, (remove this line)
-	"icao24": "4b5da2",
-	"callsign": "TE21    ",
-	"origin_country": "Switzerland",
-	"time_position": 1583723249,
-	"last_contact": 1583723249,
-	"longitude": 8.5635,
-	"latitude": 47.4437
-}
- */
