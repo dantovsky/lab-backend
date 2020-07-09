@@ -15,7 +15,8 @@ pipeline {
             steps {
                 // Create a new dir
                 dir('frontend') {
-                    git credentialsId: 'github_login', url: 'https://github.com/dantovsky/tasks-frontend' // download files
+                    git credentialsId: 'github_login', url: 'https://github.com/dantovsky/lab-frontend' // download files
+                    sh 'ls'
                     sh 'npm install' // install packages and dependencies
                     sh 'npm run serve' // deploy
                 }
