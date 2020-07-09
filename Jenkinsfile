@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    triggers {
-        pollSCM('* * * * *')
-    }
     stages {
         stage('Build Backend') {
             steps {
@@ -12,7 +9,7 @@ pipeline {
 
         stage('Deploy Backend') {
             steps {
-                sh 'java -jar target/lab-backend.war'
+                sh './mvnw spring:boot start' // java -jar target/lab-backend.war
             }
         }
 
