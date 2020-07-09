@@ -6,5 +6,3 @@ ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=default", "/app.war"]
 # CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.war"]
 
 EXPOSE 8080
-
-FROM postgres:9.6
