@@ -8,10 +8,10 @@
         <version>2.2.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>consuming-rest</artifactId>
+    <groupId>com.example.cinsumingrest</groupId>
+    <artifactId>lab-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>consuming-rest</name>
+    <name>lab-backend</name>
     <packaging>war</packaging>
     <description>Lab Project Recurso</description>
 
