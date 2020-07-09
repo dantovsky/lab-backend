@@ -10,7 +10,11 @@ pipeline {
             }
         }
 
-        // stage Deploy Backend removed
+        stage('Deploy Backend') {
+            steps {
+                deploy adapters: null, contextPath: 'lab-backend', war: 'target/lab-backend.war'
+            }
+        }
 
         // API Test
 
