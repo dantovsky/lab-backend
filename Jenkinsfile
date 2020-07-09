@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        stage {
+        stage('Run Frontend') {
             steps {
                 // Create a new dir
                 dir('frontend') {
