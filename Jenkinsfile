@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy Backend') {
             steps {
-                deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://localhost:8001/')], contextPath: 'lab-backend', war: 'target/lab-backend.war'
+                deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://localhost:8080/')], contextPath: 'lab-backend', war: 'target/lab-backend.war'
             }
         }
     }
