@@ -9,7 +9,7 @@
 
 # Objetivos:
 ```
-Para recurso: a partir do Lab Project implementar um pipeline DevOps com Jenkins tal como no projecto.
+A partir do Lab Project implementar um pipeline DevOps com Jenkins tal como no projecto.
 
 A base de implementação já existe, mas precisa:
 - adaptá-lo a um pipeline no jenkins
