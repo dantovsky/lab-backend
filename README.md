@@ -5,7 +5,7 @@
 \* Aluno: Dante Ferreira Marinho                     *  
 ******************************************************
 
-![Pipeline DevOps com Jenkins](https://raw.githubusercontent.com/dantovsky/lab-backend/master/print-of-planes.png "Pipeline DevOps com Jenkins")
+![Frontend VueJS](https://raw.githubusercontent.com/dantovsky/lab-backend/master/print-of-planes.png "Frontend VueJS")
 
 # Objetivos:
 ```
@@ -19,13 +19,13 @@ A base de implementação já existe, mas precisa:
 
 O projeto contém três repositórios:
 
-- Backend(this)  
+- Backend(this) » Spring Boot   
 https://github.com/dantovsky/lab-backend
 
-- Frontend  
+- Frontend » VueJS  
 https://github.com/dantovsky/lab-frontend
 
-- API Test (Aplicação para testar a API fornecida pelo backend)  
+- API Test (Aplicação para testar a API fornecida pelo backend) » Spring Boot  
 https://github.com/dantovsky/lab-api-test
 
 # Requisitos de funcionamento
@@ -47,6 +47,8 @@ Pipeline
     Script Path: Jenkinsfile
 
 # Fluxo do Pipeline
+
+![Pipeline DevOps com Jenkins](https://raw.githubusercontent.com/dantovsky/lab-backend/master/screenshot-pipeline-jenkins.png "Pipeline DevOps com Jenkins")
 
 1. Obtenção do Jenkinsfile :: O Pipiline inicia pelo download do projeto Git do backend, onde está contido o Jenkinsfile, o ficheiro de configuração que irá orientar todo o Pipeline.  
 2. Buildo Backend :: Build do backend: mvn package.  
