@@ -32,6 +32,22 @@ https://github.com/dantovsky/lab-api-test
 - Maven
 - Jenkins
 - Docker
+- Linux  
+Os comandos no Jenkinsfile foram feitos para o ambiente Unix. Para utilizar no Windows, basta alterar o comando **sh** para **bat**.  
+Exemplo de sintaxe:
+
+```
+pipeline {
+    agent any
+    stages {
+        stage('Build Backend') {
+            steps {
+                sh 'mvn clean package -DskipTests=true'
+            }
+        }
+    }
+}
+```
 
 # Configuração do Jenkins
 
