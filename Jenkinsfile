@@ -33,12 +33,14 @@ pipeline {
                 // Create a new dir
                 dir('frontend') {
                     sh 'ls'
-                    try {
-                          sh 'docker stop frontend-lab-container && docker rm frontend-lab-container && docker rmi frontend-lab'
-                      } catch (Exception e) {
-                          sh 'Tried remove a container.'
-                      }
-                      sh 'docker build -t frontend-lab . && docker run -d -it -p 8081:8080 --rm --name frontend-lab-container frontend-lab'
+                    script {
+                        try {
+                            sh 'docker stop frontend-lab-container && docker rm frontend-lab-container && docker rmi frontend-lab'
+                        } catch (Exception e) {
+                            sh 'Tried remove a container.'
+                        }
+                    }
+                    sh 'docker build -t frontend-lab . && docker run -d -it -p 8081:8080 --rm --name frontend-lab-container frontend-lab'
                     // sh 'npm install && npm run serve' // install packages and dependencies
                 }
             }
