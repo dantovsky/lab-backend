@@ -15,6 +15,7 @@ pipeline {
                 }
                 sh 'docker build -t backend-lab .' // ./mvnw spring:boot start ||| java -jar target/lab-backend.war
                 sh 'docker run -d --rm --name backend-lab-container -p 8080:8080 backend-lab'
+                sleep 5
             }
         }
         stage('API Test') {
