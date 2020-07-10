@@ -5,8 +5,11 @@
 * Aluno: Dante Ferreira Marinho                 *
 *************************************************
 
+![Pipeline DevOps](https://raw.githubusercontent.com/dantovsky/lab-backend/master/print-of-planes.png "Pipeline DevOps")
+
+
 # Objetivos:
-Para recurso: a partir do Lab Project implementar um pipeline devops tal como no projecto.
+Para recurso: a partir do Lab Project implementar um pipeline DevOps tal como no projecto.
 
 A base de implementação já existe, mas precisa:
 - adaptá-lo a um pipeline no jenkins
@@ -17,13 +20,13 @@ A base de implementação já existe, mas precisa:
 
 O projeto contém três repositórios:
 
-Backend(this)  
+- Backend(this)  
 https://github.com/dantovsky/lab-backend
 
-Frontend  
+- Frontend  
 https://github.com/dantovsky/lab-frontend
 
-API Test (Aplicação para testar a API fornecida pelo backend)  
+- API Test (Aplicação para testar a API fornecida pelo backend)  
 https://github.com/dantovsky/lab-api-test
 
 # Configuração do Jenkins
