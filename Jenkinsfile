@@ -19,7 +19,15 @@ pipeline {
             }
         }
 
-        // API Test
+        stage('API Test') {
+            steps {
+                // Create a new dir inside lab-backend project
+                dir('api-test') {
+                    git credentialsId: 'github_login', url: 'https://github.com/dantovsky/lab-api-test'
+                    sh 'mvn test'
+                }
+            }
+        }
 
         stage('Download Frontend') {
             steps {
@@ -41,7 +49,6 @@ pipeline {
                         sh 'docker rmi frontend-lab'
                     }
                     sh 'docker build -t frontend-lab . && docker run -d -it -p 8081:8080 --rm --name frontend-lab-container frontend-lab'
-                    // sh 'npm install && npm run serve' // install packages and dependencies
                 }
             }
         }
