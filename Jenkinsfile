@@ -9,6 +9,9 @@ pipeline {
 
         stage('Deploy Backend') {
             steps {
+                sh 'docker stop backend111'
+                sh 'docker rm backend111'
+                sh 'docker rmi backend111'
                 sh 'docker build -t backend111 .' // ./mvnw spring:boot start ||| java -jar target/lab-backend.war
                 sh 'docker run -d --name backend111 -p 8083:8080 backend111'
             }
