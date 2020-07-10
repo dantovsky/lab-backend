@@ -33,7 +33,7 @@ pipeline {
                 // Create a new dir
                 dir('frontend') {
                     sh 'ls'
-                    catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
                         sh 'docker stop frontend-lab-container'
                         sh 'docker rm frontend-lab-container'
                         sh 'docker rmi frontend-lab'
