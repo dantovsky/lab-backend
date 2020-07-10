@@ -13,7 +13,7 @@ pipeline {
                 sh 'docker rm backend111'
                 sh 'docker rmi backend111'
                 sh 'docker build -t backend111 .' // ./mvnw spring:boot start ||| java -jar target/lab-backend.war
-                sh 'docker run -d --name backend111 -p 8000:8080 backend111'
+                sh 'docker run -d --name backend111 -p 8080:8080 backend111'
             }
         }
 
