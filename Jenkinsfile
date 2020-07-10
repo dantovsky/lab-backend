@@ -6,19 +6,18 @@ pipeline {
                 sh 'mvn clean package -DskipTests=true' // clean and build without make tests
             }
         }
-
-        stage('Deploy Backend') {
+        stage('Build & Deploy Backend') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-                    sh 'docker stop backend111'
-                    sh 'docker rm backend111'
-                    sh 'docker rmi backend111'
+                    sh 'docker stop backend-lab'
+                    sh 'docker rm backend-lab'
+                    sh 'docker rmi backend-lab'
                 }
-                sh 'docker build -t backend111 .' // ./mvnw spring:boot start ||| java -jar target/lab-backend.war
-                sh 'docker run -d --name backend111 -p 8080:8080 backend111'
+                sh 'docker build -t backend-lab .' // ./mvnw spring:boot start ||| java -jar target/lab-backend.war
+                sh 'docker run -d --rm --name backend-lab-container -p 8080:8080 backend-lab'
+                sleep 5
             }
         }
-
         stage('API Test') {
             steps {
                 // Create a new dir inside lab-backend project
@@ -28,7 +27,6 @@ pipeline {
                 }
             }
         }
-
         stage('Download Frontend') {
             steps {
                 // Create a new dir
