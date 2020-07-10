@@ -1,15 +1,15 @@
 
-*************************************************
-* Engenharia de Software >> Trabalho Recurso    *
-* Prof: José Maria Fernandes                    *
-* Aluno: Dante Ferreira Marinho                 *
-*************************************************
+*****************************************************
+* UA » Engenharia de Software » Trabalho Recurso    *
+* Prof: José Maria Fernandes                        *
+* Aluno: Dante Ferreira Marinho                     *
+*****************************************************
 
-![Pipeline DevOps](https://raw.githubusercontent.com/dantovsky/lab-backend/master/print-of-planes.png "Pipeline DevOps")
+![Pipeline DevOps com Jenkins](https://raw.githubusercontent.com/dantovsky/lab-backend/master/print-of-planes.png "Pipeline DevOps com Jenkins")
 
 
 # Objetivos:
-Para recurso: a partir do Lab Project implementar um pipeline DevOps tal como no projecto.
+Para recurso: a partir do Lab Project implementar um pipeline DevOps com Jenkins tal como no projecto.
 
 A base de implementação já existe, mas precisa:
 - adaptá-lo a um pipeline no jenkins
