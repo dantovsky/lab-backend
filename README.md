@@ -53,12 +53,12 @@ pipeline {
 
 Foi criado um job de nome PipelineLab com a seguinte configuração:
 
-_ Pipeline  
-____Definition: Pipeline script from SCM  
-____SCM: Git  
-____Repositories: https://github.com/dantovsky/lab-backend  
-____Branch: */master  
-____Script Path: Jenkinsfile  
+- Pipeline  
+    - Definition: Pipeline script from SCM  
+    - SCM: Git  
+    - Repositories: https://github.com/dantovsky/lab-backend  
+    - Branch: */master  
+    - Script Path: Jenkinsfile  
 
 # Fluxo do Pipeline
 
