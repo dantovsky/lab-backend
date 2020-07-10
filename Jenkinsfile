@@ -9,7 +9,7 @@ pipeline {
 
         stage('Deploy Backend') {
             steps {
-                catchError(stageResult: 'SUCCESS') {
+                catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
                     sh 'docker stop backend111'
                     sh 'docker rm backend111'
                     sh 'docker rmi backend111'
@@ -35,7 +35,7 @@ pipeline {
                 // Create a new dir
                 dir('frontend') {
                     sh 'ls'
-                    catchError(stageResult: 'SUCCESS') {
+                    catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
                         sh 'docker stop frontend-lab-container'
                         sh 'docker rm frontend-lab-container'
                         sh 'docker rmi frontend-lab'
