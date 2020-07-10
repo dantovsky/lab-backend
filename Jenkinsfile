@@ -13,7 +13,7 @@ pipeline {
                 sh 'docker rm backend111'
                 sh 'docker rmi backend111'
                 sh 'docker build -t backend111 .' // ./mvnw spring:boot start ||| java -jar target/lab-backend.war
-                sh 'docker run -d --name backend111 -p 8083:8080 backend111'
+                sh 'docker run -d --name backend111 -p 8000:8080 backend111'
             }
         }
 
@@ -25,16 +25,15 @@ pipeline {
                 dir('frontend') {
                     git credentialsId: 'github_login', url: 'https://github.com/dantovsky/lab-frontend' // download files
                     sh 'ls'
-                    sh 'npm install' // install packages and dependencies
                 }
             }
         }
-        stage('Run Frontend') {
+        stage('Build & Run Frontend') {
             steps {
                 // Create a new dir
                 dir('frontend') {
                     sh 'ls'
-                    sh 'npm run serve' // deploy
+                    sh 'npm install && npm run serve' // install packages and dependencies
                 }
             }
         }
