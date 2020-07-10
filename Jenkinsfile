@@ -13,11 +13,6 @@ pipeline {
                 sh 'docker rm backend111'
                 sh 'docker rmi backend111'
                 sh 'docker build -t backend111 .' // ./mvnw spring:boot start ||| java -jar target/lab-backend.war
-
-                sh 'docker stop frontend-lab-container'
-                sh 'docker rm frontend-lab-container'
-                sh 'docker rmi frontend-lab'
-
                 sh 'docker run -d --name backend111 -p 8080:8080 backend111'
             }
         }
@@ -38,6 +33,11 @@ pipeline {
                 // Create a new dir
                 dir('frontend') {
                     sh 'ls'
+                    catchError(stageResult: 'SUCCESS') {
+                        sh 'docker stop frontend-lab-container'
+                        sh 'docker rm frontend-lab-container'
+                        sh 'docker rmi frontend-lab'
+                    }
                     sh 'docker build -t frontend-lab . && docker run -d -it -p 8081:8080 --rm --name frontend-lab-container frontend-lab'
                     // sh 'npm install && npm run serve' // install packages and dependencies
                 }
