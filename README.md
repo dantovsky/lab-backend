@@ -1,6 +1,6 @@
 # UA » Engenharia de Software » Trabalho Recurso  
 
-Prof: José Maria Fernandes  
+Professor: José Maria Fernandes  
 Aluno: Dante Ferreira Marinho
 
 ![Frontend VueJS](https://raw.githubusercontent.com/dantovsky/lab-backend/master/print-of-planes.png "Frontend VueJS")
@@ -37,12 +37,12 @@ https://github.com/dantovsky/lab-api-test
 
 Foi criado um job de nome PipelineLab com a seguinte configuração:
 
-Pipeline
-    Definition: Pipeline script from SCM
-    SCM: Git
-    Repositories: https://github.com/dantovsky/lab-backend
-    Branch: */master
-    Script Path: Jenkinsfile
+_ Pipeline  
+____Definition: Pipeline script from SCM  
+____SCM: Git  
+____Repositories: https://github.com/dantovsky/lab-backend  
+____Branch: */master  
+____Script Path: Jenkinsfile  
 
 # Fluxo do Pipeline
 
@@ -54,4 +54,14 @@ Pipeline
 4. API Test :: Download from Git, da app que realiza teste à API, seguido da sua execução.  
 5. Download Frontend :: get from Git.  
 6. Build & Deploy Frontend :: aplicação pronta para demonstação.  
+
+# Créditos e Referências
+
+- OpenSky  
+https://opensky-network.org/  
+Plataforma que fornece uma API com dados de vôos, onde estes foram processados pela aplicação backend.
+
+- Helder Paraense  
+Colega de grupo do primeiro trabalho (Lab) da disciplina de Engenharia de Software, onde participou da elaboração do backend.
+
 
