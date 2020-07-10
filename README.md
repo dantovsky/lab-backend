@@ -1,12 +1,11 @@
 
-*****************************************************
-* UA » Engenharia de Software » Trabalho Recurso    *
-* Prof: José Maria Fernandes                        *
-* Aluno: Dante Ferreira Marinho                     *
-*****************************************************
+\*****************************************************
+\* UA » Engenharia de Software » Trabalho Recurso    *
+\* Prof: José Maria Fernandes                        *
+\* Aluno: Dante Ferreira Marinho                     *
+\*****************************************************
 
 ![Pipeline DevOps com Jenkins](https://raw.githubusercontent.com/dantovsky/lab-backend/master/print-of-planes.png "Pipeline DevOps com Jenkins")
-
 
 # Objetivos:
 Para recurso: a partir do Lab Project implementar um pipeline DevOps com Jenkins tal como no projecto.
@@ -28,6 +27,13 @@ https://github.com/dantovsky/lab-frontend
 
 - API Test (Aplicação para testar a API fornecida pelo backend)  
 https://github.com/dantovsky/lab-api-test
+
+# Requisitos de funcionamento
+
+- Java (openjdk8)
+- Maven
+- Jenkins
+- Docker
 
 # Configuração do Jenkins
 
