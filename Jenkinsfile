@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build Backend') {
             steps {
+            sh 'ls'
                 // sh 'mvn clean package -DskipTests=true' // clean and build without make tests
             }
         }
