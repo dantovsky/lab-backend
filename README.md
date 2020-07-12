@@ -1,5 +1,6 @@
-# UA » Engenharia de Software » Trabalho Recurso  
-
+# Jenkins Pipeline e Docker
+ 
+## UA » Engenharia de Software » Trabalho Recurso  
 Professor: Doutor José Maria Fernandes  
 Aluno: Dante Ferreira Marinho
 
@@ -65,11 +66,11 @@ Foi criado um job de nome PipelineLab com a seguinte configuração:
 ![Pipeline DevOps com Jenkins](https://raw.githubusercontent.com/dantovsky/lab-backend/master/screenshot-pipeline-jenkins.png "Pipeline DevOps com Jenkins")
 
 1. Obtenção do Jenkinsfile :: O Pipiline inicia pelo download do projeto Git do backend, onde está contido o Jenkinsfile, o ficheiro de configuração que irá orientar todo o Pipeline.  
-2. Buildo Backend :: Build do backend: mvn package.  
-3. Deploy Backend :: Com base no Dockerfile contigo no folder do backend, faz build de nova imagem e cria um container onde a partir dele faz o deploy do backend.  
+2. Buildo Backend :: Build do backend: Comando **mvn package** para criar a pasta target onde contém o arquivo WAR ou JAR da app.  
+3. Deploy Backend :: Com base no Dockerfile contigo no folder do backend, faz build de nova imagem e cria um container em **deamon mode** onde a partir dele faz o deploy do backend.  
 4. API Test :: Download from Git, da app que realiza teste à API, seguido da sua execução.  
-5. Download Frontend :: get from Git.  
-6. Build & Deploy Frontend :: aplicação pronta para demonstação.  
+5. Download Frontend :: Get from Git.  
+6. Build & Deploy Frontend :: Faz build da app VueJS em um container Docker com o Node, onde é feito o **npm install** e em seguida inicia a app com **npm run serve** e deixa a aplicação rodando em **daemon mode** ficando pronta para utilização.
 
 # Créditos e Referências
 
