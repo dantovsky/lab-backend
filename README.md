@@ -74,11 +74,15 @@ Foi criado um job de nome PipelineLab com a seguinte configuração:
 
 # Créditos e Referências
 
+
+- Helder Paraense  
+Colega de grupo do primeiro trabalho (Lab) da disciplina de Engenharia de Software, onde participou da elaboração do backend em Spring Boot.
+
 - OpenSky  
 https://opensky-network.org/  
 Plataforma que fornece uma API com dados de vôos, onde estes foram processados pela aplicação backend.
 
-- Helder Paraense  
-Colega de grupo do primeiro trabalho (Lab) da disciplina de Engenharia de Software, onde participou da elaboração do backend.
-
+- Ícones
+https://www.flaticon.com
+A app VueJS utiliza ícones obtidos em Flaticon.
 
