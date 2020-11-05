@@ -66,7 +66,7 @@ Foi criado um job de nome PipelineLab com a seguinte configuração:
 ![Pipeline DevOps com Jenkins](https://raw.githubusercontent.com/dantovsky/lab-backend/master/screenshot-pipeline-jenkins.png "Pipeline DevOps com Jenkins")
 
 1. Obtenção do Jenkinsfile :: O Pipiline inicia pelo download do projeto Git do backend, onde está contido o Jenkinsfile, o ficheiro de configuração que irá orientar todo o Pipeline.  
-2. Buildo Backend :: Build do backend: Comando **mvn package** para criar a pasta target onde contém o arquivo WAR ou JAR da app.  
+2. Build Backend :: Build do backend: Comando **mvn package** para criar a pasta target onde contém o arquivo WAR ou JAR da app.  
 3. Deploy Backend :: Com base no Dockerfile contigo no folder do backend, faz build de nova imagem e cria um container em **deamon mode** onde a partir dele faz o deploy do backend.  
 4. API Test :: Download from Git, da app que realiza teste à API, seguido da sua execução.  
 5. Download Frontend :: Get from Git.  
@@ -83,6 +83,6 @@ https://opensky-network.org/
 Plataforma que fornece uma API com dados de vôos, onde estes foram processados pela aplicação backend.
 
 - Ícones  
-https://www.flaticon.com
+https://www.flaticon.com  
 A app VueJS utiliza ícones obtidos em Flaticon.
 
